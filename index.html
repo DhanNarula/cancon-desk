@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CanCon Desk — Canadian music programming research</title>
+  <meta name="description" content="A bilingual research desk for Canadian music programming: Apple Music Canada charts joined with artist origin, label ownership, cross-market ranks and release radar, turned into ready-to-send programming pitches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23111'/><circle cx='16' cy='16' r='6' fill='%23eb6834'/></svg>">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="wrap mast-row">
+      <div class="brand">
+        <div class="wordmark">CanCon <span>Desk</span></div>
+        <div class="tagline" data-t="tagline"></div>
+      </div>
+      <div class="mast-meta">
+        <div id="asOf" class="asof"></div>
+        <div class="refreshed" data-t="refreshed"></div>
+      </div>
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="en">EN</button><button data-lang="fr">FR</button>
+      </div>
+    </div>
+    <nav class="wrap toc" id="toc" aria-label="Sections"></nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section id="pulse" class="section pulse" aria-live="polite"></section>
+
+    <section id="chart" class="section">
+      <div class="sec-head"><h2 data-t="chartTitle"></h2><p data-t="chartDek"></p></div>
+      <div class="controls">
+        <div class="seg" id="kindSeg" role="tablist"></div>
+        <div class="chips" id="filterChips"></div>
+        <input id="search" class="search" type="search" autocomplete="off">
+      </div>
+      <div class="table-wrap"><table class="chart-table" id="chartTable"></table></div>
+      <div class="more"><button id="moreBtn" class="btn ghost"></button></div>
+    </section>
+
+    <section id="away" class="section">
+      <div class="sec-head"><h2 data-t="awayTitle"></h2><p data-t="awayDek"></p></div>
+      <div class="grid-2 away-grid">
+        <figure class="card">
+          <div class="fig-top">
+            <div class="legend" id="awayLegend"></div>
+            <label class="compare"><span data-t="compareWith"></span> <select id="marketSel"></select></label>
+          </div>
+          <div id="scatter" class="chart-box"></div>
+          <figcaption id="staleNote" class="note"></figcaption>
+        </figure>
+        <aside class="card">
+          <h3 data-t="exportsTitle"></h3>
+          <p class="muted small" data-t="exportsDek"></p>
+          <ol id="exports" class="exports"></ol>
+        </aside>
+      </div>
+    </section>
+
+    <section id="scenes" class="section">
+      <div class="sec-head"><h2 data-t="scenesTitle"></h2><p data-t="scenesDek"></p></div>
+      <div class="grid-2 scenes-grid">
+        <figure class="card map-card"><div id="map" class="chart-box"></div></figure>
+        <div id="cityList" class="city-list"></div>
+      </div>
+    </section>
+
+    <section id="labels" class="section">
+      <div class="sec-head"><h2 data-t="labelsTitle"></h2><p data-t="labelsDek"></p></div>
+      <div class="grid-2">
+        <div class="card"><div id="tierBars"></div></div>
+        <div class="card"><h3 data-t="topLabels"></h3><ol id="labelList" class="label-list"></ol></div>
+      </div>
+    </section>
+
+    <section id="sound" class="section">
+      <div class="sec-head"><h2 data-t="soundTitle"></h2><p data-t="soundDek"></p></div>
+      <div class="grid-2">
+        <figure class="card"><h3 data-t="genreTitle"></h3><div class="legend" id="genreLegend"></div><div id="genres" class="chart-box"></div><figcaption id="genreNote" class="note"></figcaption></figure>
+        <figure class="card"><h3 data-t="ageTitle"></h3><div class="legend" id="ageLegend"></div><div id="ages" class="chart-box"></div></figure>
+      </div>
+    </section>
+
+    <section id="radar" class="section">
+      <div class="sec-head"><h2 data-t="radarTitle"></h2><p data-t="radarDek"></p></div>
+      <div id="radarList" class="radar"></div>
+    </section>
+
+    <section id="pitches" class="section">
+      <div class="sec-head"><h2 data-t="pitchesTitle"></h2><p data-t="pitchesDek"></p></div>
+      <div id="oppGrid" class="opp-grid"></div>
+    </section>
+
+    <section id="method" class="section">
+      <div class="sec-head"><h2 data-t="methodTitle"></h2></div>
+      <dl id="methodList" class="method"></dl>
+      <p id="sourceStats" class="muted small"></p>
+    </section>
+  </main>
+
+  <footer class="footer wrap"><p data-t="footer"></p></footer>
+
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+
+  <dialog id="pitchDlg" class="pitch-dlg" aria-labelledby="pitchHead">
+    <form method="dialog" id="pitchForm"></form>
+  </dialog>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

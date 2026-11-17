@@ -1,0 +1,22 @@
+{
+  "_readme": "Editor corrections, applied on every refresh. 'artists' is keyed by Apple Music artist ID; 'labels' by the label name parsed from the copyright line (lower-case).",
+  "artists": {
+    "99320": {
+      "canadian": false,
+      "basis": "editor",
+      "note": "American (Atlanta, Georgia)"
+    },
+    "1384373733": {
+      "canadian": false,
+      "basis": "editor",
+      "note": "American (Alabama)"
+    }
+  },
+  "labels": {
+    "taylor swift": {
+      "tier": "major",
+      "group": "Universal",
+      "note": "Artist-owned masters, released via Republic Records"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "cancon-desk",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "refresh": "node scripts/fetch.mjs",
+    "test": "node test/analyze.test.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
